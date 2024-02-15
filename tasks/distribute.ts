@@ -19,7 +19,7 @@ task("distribute", "Distribute Tokens Script")
 
 	    let list = DistributionList.filter((addr: string) => ethers.utils.isAddress(addr));
 
-	    console.log("Contract Balance Before: " + ethers.utils.formatUnits((await contract.balanceOf()).toString(), "ether") + " ETH");
+	    console.log("Contract Balance Before: " + ethers.utils.formatUnits((await contract.balanceOf()).toString(), "ether") + " sFUEL");
 
 	    const lists = chunk(list);
 
@@ -31,7 +31,7 @@ task("distribute", "Distribute Tokens Script")
 	    	console.log("Round Completed");
 	    }
 
-	    console.log("Contract Balance After: " + ethers.utils.formatUnits((await contract.balanceOf()).toString(), "ether") + " ETH");
+	    console.log("Contract Balance After: " + ethers.utils.formatUnits((await contract.balanceOf()).toString(), "ether") + " sFUEL");
 
 	    console.log("Distribution Successful to " + list.length + " addresses!");
     });
